@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Letter for You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        background: #f4efe9;
+        font-family: "Georgia", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 90vw;
+        max-width: 900px;
+        text-align: center;
+    }
+
+    .envelope {
+        background: #e6d8c7;
+        border-radius: 6px;
+        padding: 30px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.5s ease;
+        position: relative;
+    }
+
+    .envelope:hover {
+        transform: translateY(-6px);
+    }
+
+    .seal {
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: #6f6254;
+        margin-bottom: 15px;
+    }
+
+    .letter {
+        background: #fffdf8;
+        padding: 30px;
+        border-radius: 6px;
+        margin-top: 20px;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s ease;
+    }
+
+    .letter img {
+        width: 100%;
+        max-width: 800px;
+        margin: 25px auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .open .letter {
+        opacity: 1;
+        max-height: 3000px;
+    }
+
+    .hint {
+        margin-top: 15px;
+        font-size: 15px;
+        color: #6f6254;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+        .letter {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="envelope" onclick="this.classList.toggle('open')">
+        <div class="seal">💌 A Letter for You</div>
+
+        <div class="letter">
+            <img src="5.png" alt="Anniversary Photo">
+            <img src="4.png" alt="Letter Photo">
+        </div>
+
+        <div class="hint">Click to open</div>
+    </div>
+</div>
+
+</body>
+</html>
